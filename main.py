@@ -1,15 +1,15 @@
 """
-Bank Agent API - v1.0
-Endpoints:
+Bank Agent API - v1.1
+7 endpoints (5 demo + /health + root):
+  GET /                      - root (API info)
   GET /health                - status + data load counts
-  GET /customer              - workhorse: full customer package (accounts, wallets, cards, recent txns, bills)
-  GET /transactions          - filtered transaction history
-  GET /card                  - card details
+  GET /customer              - workhorse: full customer package
+                               (accounts, wallets, cards, recent txns, bills, active onboarding journey)
+  GET /transactions          - filtered transaction history (when more than recent 10 are needed)
   GET /branch                - branch/ATM lookup (by city, type, or service)
   GET /product               - product catalog lookup
   GET /biller                - biller catalog lookup
-  GET /kyc-tier              - KYC tier requirements & limits
-  GET /onboarding-journey    - wallet onboarding journey lookup (by customer or phone)
+  GET /kyc-tier              - KYC tier requirements & limits (for upgrade pitch flows)
 """
 import json
 import os
@@ -17,7 +17,7 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Bank Agent API", version="1.0")
+app = FastAPI(title="Bank Agent API", version="1.1")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -75,15 +75,6 @@ def find_customer(cid):
 def find_customer_by_phone(phone):
     return next((c for c in customers if c["Phone"] == phone), None)
 
-def find_account(aid):
-    return next((a for a in accounts if a["Account ID"] == aid), None)
-
-def find_wallet(wid):
-    return next((w for w in wallets if w["Wallet ID"] == wid), None)
-
-def find_card(cid):
-    return next((c for c in cards if c["Card ID"] == cid), None)
-
 def find_biller(bid):
     return next((b for b in billers_catalog if b["Biller ID"] == bid), None)
 
@@ -99,7 +90,7 @@ def find_kyc_tier_by_name(tier_name):
 def root():
     return {
         "name": "Bank Agent API",
-        "version": "1.0",
+        "version": "1.1",
         "docs": "/docs",
         "health": "/health"
     }
@@ -109,7 +100,7 @@ def root():
 def health():
     return {
         "status": "healthy",
-        "version": "1.0",
+        "version": "1.1",
         "data_loaded": {
             "customers": len(customers),
             "accounts": len(accounts),
@@ -129,34 +120,36 @@ def health():
 @app.get("/customer")
 def get_customer_data(
     customer_id: Optional[str] = Query(None, description="Customer ID e.g. CUST-001"),
-    phone: Optional[str] = Query(None, description="Phone number, e.g. +966501234001"),
+    phone: Optional[str] = Query(None, description="Phone number e.g. +966501234001"),
     transaction_limit: int = Query(10, description="Max recent transactions per account"),
 ):
-    """Workhorse endpoint - everything for one customer in one call."""
+    """Workhorse endpoint - everything for one customer in a single call.
+
+    Returns:
+      - customer profile
+      - all accounts (current/savings/investment)
+      - all wallets
+      - all cards (with status, including any frozen/disputed)
+      - recent transactions (limit per account, most recent first)
+      - recent bill payments
+      - active wallet onboarding journey (if any)
+    """
     if not customer_id and not phone:
         raise HTTPException(400, "Provide either customer_id or phone")
 
     customer = find_customer(customer_id) if customer_id else find_customer_by_phone(phone)
     if not customer:
-        raise HTTPException(404, f"Customer not found")
+        raise HTTPException(404, "Customer not found")
 
     cid = customer["Customer ID"]
 
-    # Customer's accounts (with masked IBAN — full IBAN never returned in API responses)
     cust_accounts = [a for a in accounts if a["Customer ID"] == cid]
-    for a in cust_accounts:
-        a = a  # we keep IBAN visible since it's a known field; agent SI handles masking
-
-    # Customer's wallets
     cust_wallets = [w for w in wallets if w["Customer ID"] == cid]
-
-    # Customer's cards (PAN already only last 4)
     cust_cards = [c for c in cards if c["Customer ID"] == cid]
 
     # Recent transactions per account (limit per account)
     cust_txns = [t for t in transactions if t["Customer ID"] == cid]
     cust_txns.sort(key=lambda t: (t["Date"], t["Time"]), reverse=True)
-    # Group by account, take top N each
     by_account = {}
     for t in cust_txns:
         by_account.setdefault(t["Account ID"], []).append(t)
@@ -170,7 +163,7 @@ def get_customer_data(
     cust_bills.sort(key=lambda p: (p["Date"], p["Time"]), reverse=True)
     recent_bills = cust_bills[:transaction_limit]
 
-    # Active wallet onboarding journey if any
+    # Active onboarding journey (folded in — no separate endpoint needed)
     journey = next((j for j in wallet_onboarding_journeys if j["Customer ID"] == cid), None)
 
     return {
@@ -205,7 +198,8 @@ def get_transactions(
     date_to: Optional[str] = Query(None, description="YYYY-MM-DD"),
     limit: int = Query(20),
 ):
-    """Filtered transaction history."""
+    """Filtered transaction history. Use when /customer's recent_transactions isn't enough
+    (e.g., 'show me all my Saudi Electricity bills', 'find that disputed transaction')."""
     txns = list(transactions)
 
     if customer_id:
@@ -231,15 +225,6 @@ def get_transactions(
         "total_matching": len(txns),
         "returned": min(limit, len(txns)),
     }
-
-
-@app.get("/card")
-def get_card(card_id: str = Query(..., description="Card ID e.g. CARD-001")):
-    """Card details."""
-    card = find_card(card_id)
-    if not card:
-        raise HTTPException(404, f"Card {card_id} not found")
-    return card
 
 
 @app.get("/branch")
@@ -286,7 +271,7 @@ def get_billers(
     biller_id: Optional[str] = Query(None),
     category: Optional[str] = Query(None, description="Telecom / Utilities / Government / Insurance / Charity"),
 ):
-    """Biller catalog lookup."""
+    """Biller catalog lookup. Use when customer wants to pay a bill."""
     if biller_id:
         b = find_biller(biller_id)
         if not b:
@@ -303,7 +288,8 @@ def get_kyc_tier(
     tier_id: Optional[str] = Query(None, description="e.g. KYC-PLUS"),
     tier_name: Optional[str] = Query(None, description="e.g. Plus"),
 ):
-    """KYC tier lookup."""
+    """KYC tier lookup. Use when explaining what's needed to upgrade
+    (e.g., Sara hits Basic 5K limit, agent pitches Plus upgrade)."""
     if not tier_id and not tier_name:
         return {"tiers": kyc_tiers, "count": len(kyc_tiers)}
     if tier_id:
@@ -313,20 +299,3 @@ def get_kyc_tier(
     if not t:
         raise HTTPException(404, "KYC tier not found")
     return t
-
-
-@app.get("/onboarding-journey")
-def get_onboarding_journey(
-    customer_id: Optional[str] = Query(None),
-    phone: Optional[str] = Query(None),
-):
-    """Wallet onboarding journey lookup."""
-    if not customer_id and not phone:
-        raise HTTPException(400, "Provide either customer_id or phone")
-    if customer_id:
-        j = next((jr for jr in wallet_onboarding_journeys if jr["Customer ID"] == customer_id), None)
-    else:
-        j = next((jr for jr in wallet_onboarding_journeys if jr["Phone"] == phone), None)
-    if not j:
-        return {"journey": None, "message": "No active onboarding journey for this customer/phone"}
-    return j
