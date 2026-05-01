@@ -1,0 +1,222 @@
+[
+  {
+    "Biller ID": "BLR-STC",
+    "Biller Name (EN)": "STC",
+    "Biller Name (AR)": "الاتصالات السعودية",
+    "Category": "Telecom",
+    "Sadad Code": "020",
+    "Service Types": [
+      "Postpaid Mobile",
+      "Prepaid Recharge",
+      "Internet (Jood)",
+      "Landline"
+    ],
+    "Reference Format": "10-digit phone number or 9-digit account number",
+    "Min Payment": 10.0,
+    "Max Payment": 10000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Saudi Telecom Company. Pay postpaid bills, recharge prepaid lines, internet, and fixed line bills.",
+    "Notes (AR)": "شركة الاتصالات السعودية. ادفع فواتير الجوال والإنترنت والهاتف الثابت."
+  },
+  {
+    "Biller ID": "BLR-MOBILY",
+    "Biller Name (EN)": "Mobily",
+    "Biller Name (AR)": "موبايلي",
+    "Category": "Telecom",
+    "Sadad Code": "021",
+    "Service Types": [
+      "Postpaid Mobile",
+      "Prepaid Recharge",
+      "Internet"
+    ],
+    "Reference Format": "10-digit phone number",
+    "Min Payment": 10.0,
+    "Max Payment": 10000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Etihad Etisalat (Mobily). Mobile and home internet services.",
+    "Notes (AR)": "اتحاد اتصالات (موبايلي). خدمات الجوال والإنترنت المنزلي."
+  },
+  {
+    "Biller ID": "BLR-ZAIN",
+    "Biller Name (EN)": "Zain",
+    "Biller Name (AR)": "زين",
+    "Category": "Telecom",
+    "Sadad Code": "022",
+    "Service Types": [
+      "Postpaid Mobile",
+      "Prepaid Recharge",
+      "Internet"
+    ],
+    "Reference Format": "10-digit phone number",
+    "Min Payment": 10.0,
+    "Max Payment": 10000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Zain Saudi Arabia. Mobile and internet services.",
+    "Notes (AR)": "زين السعودية. خدمات الجوال والإنترنت."
+  },
+  {
+    "Biller ID": "BLR-SEC",
+    "Biller Name (EN)": "Saudi Electricity Company",
+    "Biller Name (AR)": "الشركة السعودية للكهرباء",
+    "Category": "Utilities",
+    "Sadad Code": "010",
+    "Service Types": [
+      "Electricity Bill"
+    ],
+    "Reference Format": "10-digit account number",
+    "Min Payment": 10.0,
+    "Max Payment": 50000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Saudi Electricity Company (SEC). Monthly electricity bill payments.",
+    "Notes (AR)": "الشركة السعودية للكهرباء. دفع فواتير الكهرباء الشهرية."
+  },
+  {
+    "Biller ID": "BLR-NWC",
+    "Biller Name (EN)": "National Water Company",
+    "Biller Name (AR)": "شركة المياه الوطنية",
+    "Category": "Utilities",
+    "Sadad Code": "011",
+    "Service Types": [
+      "Water Bill"
+    ],
+    "Reference Format": "9-digit account number",
+    "Min Payment": 10.0,
+    "Max Payment": 20000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "National Water Company (NWC). Water and sewerage bill payments.",
+    "Notes (AR)": "شركة المياه الوطنية. دفع فواتير المياه والصرف الصحي."
+  },
+  {
+    "Biller ID": "BLR-GAS",
+    "Biller Name (EN)": "Saudi Gas",
+    "Biller Name (AR)": "الغاز السعودي",
+    "Category": "Utilities",
+    "Sadad Code": "012",
+    "Service Types": [
+      "Gas Bill"
+    ],
+    "Reference Format": "8-digit account number",
+    "Min Payment": 10.0,
+    "Max Payment": 10000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Saudi Gas Company. Residential and commercial gas billing.",
+    "Notes (AR)": "شركة الغاز السعودية. فواتير الغاز السكنية والتجارية."
+  },
+  {
+    "Biller ID": "BLR-ABSHER",
+    "Biller Name (EN)": "Absher (MoI Services)",
+    "Biller Name (AR)": "أبشر (وزارة الداخلية)",
+    "Category": "Government",
+    "Sadad Code": "030",
+    "Service Types": [
+      "Traffic Violations",
+      "Iqama Renewal",
+      "Vehicle Registration",
+      "Passport Services"
+    ],
+    "Reference Format": "10-digit National/Iqama ID",
+    "Min Payment": 50.0,
+    "Max Payment": 50000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Ministry of Interior services via Absher platform.",
+    "Notes (AR)": "خدمات وزارة الداخلية عبر منصة أبشر."
+  },
+  {
+    "Biller ID": "BLR-ZATCA",
+    "Biller Name (EN)": "ZATCA (Tax & Customs)",
+    "Biller Name (AR)": "هيئة الزكاة والضريبة والجمارك",
+    "Category": "Government",
+    "Sadad Code": "031",
+    "Service Types": [
+      "VAT",
+      "Income Tax",
+      "Customs Duty"
+    ],
+    "Reference Format": "Tax/VAT registration number",
+    "Min Payment": 10.0,
+    "Max Payment": 10000000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Zakat, Tax and Customs Authority. VAT and tax payments.",
+    "Notes (AR)": "هيئة الزكاة والضريبة والجمارك. مدفوعات الضريبة والزكاة."
+  },
+  {
+    "Biller ID": "BLR-GOSI",
+    "Biller Name (EN)": "GOSI",
+    "Biller Name (AR)": "التأمينات الاجتماعية",
+    "Category": "Government",
+    "Sadad Code": "032",
+    "Service Types": [
+      "Social Insurance"
+    ],
+    "Reference Format": "Employer or member registration number",
+    "Min Payment": 10.0,
+    "Max Payment": 1000000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "General Organization for Social Insurance.",
+    "Notes (AR)": "المؤسسة العامة للتأمينات الاجتماعية."
+  },
+  {
+    "Biller ID": "BLR-TAWUNIYA",
+    "Biller Name (EN)": "Tawuniya Insurance",
+    "Biller Name (AR)": "التعاونية للتأمين",
+    "Category": "Insurance",
+    "Sadad Code": "040",
+    "Service Types": [
+      "Health Insurance",
+      "Motor Insurance",
+      "Property Insurance"
+    ],
+    "Reference Format": "10-digit policy number",
+    "Min Payment": 100.0,
+    "Max Payment": 100000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Company for Cooperative Insurance (Tawuniya). Premium payments.",
+    "Notes (AR)": "الشركة الوطنية التعاونية للتأمين. دفع أقساط التأمين."
+  },
+  {
+    "Biller ID": "BLR-BUPA",
+    "Biller Name (EN)": "Bupa Arabia",
+    "Biller Name (AR)": "بوبا العربية",
+    "Category": "Insurance",
+    "Sadad Code": "041",
+    "Service Types": [
+      "Health Insurance"
+    ],
+    "Reference Format": "Policy number",
+    "Min Payment": 100.0,
+    "Max Payment": 100000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Bupa Arabia health insurance premium payments.",
+    "Notes (AR)": "تأمين بوبا العربية الصحي. دفع الأقساط."
+  },
+  {
+    "Biller ID": "BLR-MADINAH",
+    "Biller Name (EN)": "Madinah Charity Society",
+    "Biller Name (AR)": "جمعية المدينة الخيرية",
+    "Category": "Charity",
+    "Sadad Code": "050",
+    "Service Types": [
+      "Donation",
+      "Zakat",
+      "Sadaqah"
+    ],
+    "Reference Format": "Optional reference",
+    "Min Payment": 10.0,
+    "Max Payment": 1000000.0,
+    "Processing Time": "Instant",
+    "Fees": "Free",
+    "Notes (EN)": "Verified charity for donations, zakat, and sadaqah.",
+    "Notes (AR)": "جمعية خيرية معتمدة للتبرعات والزكاة والصدقة."
+  }
+]

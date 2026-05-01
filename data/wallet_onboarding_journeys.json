@@ -1,0 +1,106 @@
+[
+  {
+    "Journey ID": "JRN-001",
+    "Customer ID": "CUST-003",
+    "Phone": "+966501234003",
+    "Started Date": "2026-04-25",
+    "Last Activity": "2026-04-27",
+    "Target Wallet Tier": "Plus",
+    "Current Step": 3,
+    "Total Steps": 5,
+    "Status": "Stalled",
+    "Steps": [
+      {
+        "step": 1,
+        "name": "Phone verification",
+        "name_ar": "التحقق من رقم الجوال",
+        "status": "Completed",
+        "completed_at": "2026-04-25T10:14:22+03:00"
+      },
+      {
+        "step": 2,
+        "name": "National ID submission",
+        "name_ar": "تقديم الهوية الوطنية",
+        "status": "Completed",
+        "completed_at": "2026-04-25T10:18:05+03:00"
+      },
+      {
+        "step": 3,
+        "name": "Selfie verification (liveness check)",
+        "name_ar": "التحقق بالسيلفي (فحص الحيوية)",
+        "status": "Pending",
+        "completed_at": null
+      },
+      {
+        "step": 4,
+        "name": "Address proof upload",
+        "name_ar": "تحميل إثبات العنوان",
+        "status": "Not Started",
+        "completed_at": null
+      },
+      {
+        "step": 5,
+        "name": "Final activation",
+        "name_ar": "التفعيل النهائي",
+        "status": "Not Started",
+        "completed_at": null
+      }
+    ],
+    "Documents Submitted": [
+      "National ID Front",
+      "National ID Back"
+    ],
+    "Documents Pending": [
+      "Selfie",
+      "Address Proof"
+    ],
+    "Next Action (EN)": "Take a selfie following the on-screen guide. We use a liveness check to confirm it's really you.",
+    "Next Action (AR)": "التقط صورة سيلفي حسب التعليمات على الشاشة. نستخدم فحص الحيوية للتأكد من هويتك.",
+    "Estimated Time to Complete": "5 minutes (3 steps remaining)",
+    "Reason for Stall (EN)": "Customer started on April 25, completed steps 1 and 2 quickly, then stopped. No activity for 2 days.",
+    "Notes": "RESUME-JOURNEY DEMO PERSONA. When CUST-003 messages, agent should detect this and offer to resume."
+  },
+  {
+    "Journey ID": "JRN-002",
+    "Customer ID": "CUST-004",
+    "Phone": "+966501234004",
+    "Started Date": "2026-04-30",
+    "Last Activity": "2026-04-30",
+    "Target Wallet Tier": "Basic",
+    "Current Step": 1,
+    "Total Steps": 3,
+    "Status": "In Progress",
+    "Steps": [
+      {
+        "step": 1,
+        "name": "Phone verification",
+        "name_ar": "التحقق من رقم الجوال",
+        "status": "Completed",
+        "completed_at": "2026-04-30T11:00:00+03:00"
+      },
+      {
+        "step": 2,
+        "name": "National ID submission (OCR)",
+        "name_ar": "تقديم الهوية الوطنية (مسح ضوئي)",
+        "status": "Pending",
+        "completed_at": null
+      },
+      {
+        "step": 3,
+        "name": "Wallet activation",
+        "name_ar": "تفعيل المحفظة",
+        "status": "Not Started",
+        "completed_at": null
+      }
+    ],
+    "Documents Submitted": [],
+    "Documents Pending": [
+      "National ID"
+    ],
+    "Next Action (EN)": "Send a clear photo of the front of your National ID card. Make sure all corners are visible.",
+    "Next Action (AR)": "أرسل صورة واضحة للوجه الأمامي من بطاقة الهوية الوطنية. تأكد من وضوح جميع الزوايا.",
+    "Estimated Time to Complete": "Under 2 minutes",
+    "Reason for Stall (EN)": null,
+    "Notes": "FRESH-ONBOARDING DEMO PERSONA. Just started. Agent should walk Lama through the remaining 2 steps."
+  }
+]

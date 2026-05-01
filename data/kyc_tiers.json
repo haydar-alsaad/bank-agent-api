@@ -1,0 +1,154 @@
+[
+  {
+    "Tier ID": "KYC-BASIC",
+    "Tier Name (EN)": "Basic",
+    "Tier Name (AR)": "أساسي",
+    "Required For Products": [
+      "Basic Wallet"
+    ],
+    "Required Documents": [
+      "National ID"
+    ],
+    "Verification Methods": [
+      "NID OCR"
+    ],
+    "Wallet Max Balance": 5000.0,
+    "Wallet Daily Limit": 2000.0,
+    "Wallet Monthly Limit": 10000.0,
+    "Account Eligibility": false,
+    "Card Eligibility": false,
+    "Loan Eligibility": false,
+    "Investment Eligibility": false,
+    "Onboarding Time": "Instant (under 2 minutes)",
+    "Upgrade Path Next": "Standard",
+    "Description (EN)": "Entry-level tier for instant wallet activation. Send and receive within Noor Digital Bank network. Ideal for first-time users testing the service.",
+    "Description (AR)": "المستوى الأساسي للتفعيل الفوري للمحفظة. إرسال واستقبال داخل شبكة بنك نور الرقمي. مثالي للمستخدمين الجدد."
+  },
+  {
+    "Tier ID": "KYC-STANDARD",
+    "Tier Name (EN)": "Standard",
+    "Tier Name (AR)": "معتمد",
+    "Required For Products": [
+      "Plus Wallet",
+      "Basic Current Account"
+    ],
+    "Required Documents": [
+      "National ID",
+      "Selfie"
+    ],
+    "Verification Methods": [
+      "NID OCR",
+      "Liveness Check",
+      "Face Match"
+    ],
+    "Wallet Max Balance": 20000.0,
+    "Wallet Daily Limit": 10000.0,
+    "Wallet Monthly Limit": 50000.0,
+    "Account Eligibility": true,
+    "Card Eligibility": true,
+    "Loan Eligibility": false,
+    "Investment Eligibility": false,
+    "Onboarding Time": "5 minutes",
+    "Upgrade Path Next": "Plus",
+    "Description (EN)": "Standard tier with selfie verification. Unlocks Plus Wallet, current account opening, and a basic debit card.",
+    "Description (AR)": "المستوى المعتمد مع التحقق بالسيلفي. يفتح محفظة بلس وفتح حساب جاري وبطاقة سحب أساسية."
+  },
+  {
+    "Tier ID": "KYC-PLUS",
+    "Tier Name (EN)": "Plus",
+    "Tier Name (AR)": "بلس",
+    "Required For Products": [
+      "Plus Wallet",
+      "Standard Current Account",
+      "Standard Savings Account",
+      "Standard Cards"
+    ],
+    "Required Documents": [
+      "National ID",
+      "Selfie",
+      "Address Proof"
+    ],
+    "Verification Methods": [
+      "NID OCR",
+      "Liveness Check",
+      "Face Match",
+      "Address Verification"
+    ],
+    "Wallet Max Balance": 50000.0,
+    "Wallet Daily Limit": 25000.0,
+    "Wallet Monthly Limit": 100000.0,
+    "Account Eligibility": true,
+    "Card Eligibility": true,
+    "Loan Eligibility": true,
+    "Investment Eligibility": false,
+    "Onboarding Time": "10 minutes",
+    "Upgrade Path Next": "Premium",
+    "Description (EN)": "Plus tier adds address verification. Unlocks higher limits, savings accounts, and personal loans.",
+    "Description (AR)": "المستوى بلس يضيف التحقق من العنوان. يفتح حدود أعلى وحساب توفير وقروض شخصية."
+  },
+  {
+    "Tier ID": "KYC-PREMIUM",
+    "Tier Name (EN)": "Premium",
+    "Tier Name (AR)": "مميز",
+    "Required For Products": [
+      "Premium Wallet",
+      "Premium Current/Savings Accounts",
+      "Premium Cards",
+      "Investment Products"
+    ],
+    "Required Documents": [
+      "National ID",
+      "Selfie",
+      "Address Proof",
+      "Income Verification"
+    ],
+    "Verification Methods": [
+      "Nafath",
+      "Full Bank-grade KYC"
+    ],
+    "Wallet Max Balance": 100000.0,
+    "Wallet Daily Limit": 50000.0,
+    "Wallet Monthly Limit": 200000.0,
+    "Account Eligibility": true,
+    "Card Eligibility": true,
+    "Loan Eligibility": true,
+    "Investment Eligibility": true,
+    "Onboarding Time": "10-15 minutes (with Nafath)",
+    "Upgrade Path Next": null,
+    "Description (EN)": "Full bank-grade KYC via Nafath. All products available including investments, premium cards, and high-value transfers.",
+    "Description (AR)": "تحقق هوية كامل عبر نفاذ. جميع المنتجات متاحة بما في ذلك الاستثمارات والبطاقات المميزة والتحويلات الكبيرة."
+  },
+  {
+    "Tier ID": "KYC-BUSINESS",
+    "Tier Name (EN)": "Business",
+    "Tier Name (AR)": "أعمال",
+    "Required For Products": [
+      "Business Wallet",
+      "Business Current Account",
+      "Business Cards",
+      "Merchant Services"
+    ],
+    "Required Documents": [
+      "Commercial Registration",
+      "Articles of Association",
+      "Authorized Signatories' IDs",
+      "VAT Certificate (if applicable)"
+    ],
+    "Verification Methods": [
+      "CR Verification",
+      "Beneficial Owner KYC",
+      "Wathq Integration"
+    ],
+    "Wallet Max Balance": 500000.0,
+    "Wallet Daily Limit": 100000.0,
+    "Wallet Monthly Limit": 1000000.0,
+    "Account Eligibility": true,
+    "Card Eligibility": true,
+    "Loan Eligibility": true,
+    "Investment Eligibility": true,
+    "Onboarding Time": "1-3 business days",
+    "Upgrade Path Next": null,
+    "Description (EN)": "Business tier for SMEs and corporates. Includes merchant payment acceptance, payroll services, and bulk payment tools.",
+    "Description (AR)": "مستوى الأعمال للشركات الصغيرة والمتوسطة. يشمل قبول مدفوعات التجار وخدمات الرواتب وأدوات الدفع الجماعي."
+  }
+]

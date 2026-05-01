@@ -1,0 +1,290 @@
+[
+  {
+    "Product ID": "PRD-WLT-BASIC",
+    "Product Name (EN)": "Basic Wallet",
+    "Product Name (AR)": "محفظة بيسك",
+    "Product Type": "Wallet",
+    "Product Tier": "Basic",
+    "Description (EN)": "Instant-activation digital wallet for everyday transfers and QR payments within the Noor Digital Bank network.",
+    "Description (AR)": "محفظة رقمية فورية التفعيل للتحويلات اليومية ومدفوعات QR داخل شبكة بنك نور الرقمي.",
+    "Eligibility (EN)": "Saudi nationals and residents 18+",
+    "Required Documents": [
+      "National ID"
+    ],
+    "KYC Tier Required": "Basic",
+    "Onboarding Time": "Instant (under 2 minutes)",
+    "Max Balance": 5000.0,
+    "Daily Transaction Limit": 2000.0,
+    "Monthly Transaction Limit": 10000.0,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "Send and receive within Noor Digital Bank",
+      "QR code payments at participating merchants",
+      "Bill payment (limited billers)",
+      "Mobile recharge"
+    ],
+    "Features (AR)": [
+      "إرسال واستقبال داخل بنك نور الرقمي",
+      "مدفوعات QR لدى التجار المشاركين",
+      "دفع الفواتير (محدود)",
+      "إعادة شحن الجوال"
+    ],
+    "Upgrade Path": "Plus Wallet"
+  },
+  {
+    "Product ID": "PRD-WLT-PLUS",
+    "Product Name (EN)": "Plus Wallet",
+    "Product Name (AR)": "محفظة بلس",
+    "Product Type": "Wallet",
+    "Product Tier": "Plus",
+    "Description (EN)": "Mid-tier digital wallet with full bill payment, transfers to other Saudi banks, and a virtual debit card.",
+    "Description (AR)": "محفظة رقمية متوسطة مع دفع فواتير كامل وتحويلات لبنوك سعودية أخرى وبطاقة سحب افتراضية.",
+    "Eligibility (EN)": "Saudi nationals and residents 18+ with valid Standard or Plus KYC",
+    "Required Documents": [
+      "National ID",
+      "Selfie"
+    ],
+    "KYC Tier Required": "Standard",
+    "Onboarding Time": "5 minutes",
+    "Max Balance": 20000.0,
+    "Daily Transaction Limit": 10000.0,
+    "Monthly Transaction Limit": 50000.0,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "All Basic Wallet features",
+      "Transfers to all Saudi banks (IBAN)",
+      "Full bill payment (all Sadad billers)",
+      "Virtual debit card",
+      "International remittance (within limits)"
+    ],
+    "Features (AR)": [
+      "جميع ميزات محفظة بيسك",
+      "تحويلات لجميع البنوك السعودية (IBAN)",
+      "دفع الفواتير الكامل (جميع مفوتري سداد)",
+      "بطاقة سحب افتراضية",
+      "تحويلات دولية (ضمن الحدود)"
+    ],
+    "Upgrade Path": "Premium Wallet"
+  },
+  {
+    "Product ID": "PRD-WLT-PREMIUM",
+    "Product Name (EN)": "Premium Wallet",
+    "Product Name (AR)": "محفظة مميزة",
+    "Product Type": "Wallet",
+    "Product Tier": "Premium",
+    "Description (EN)": "Top-tier wallet with maximum limits, physical debit card, and full international transfer capabilities.",
+    "Description (AR)": "محفظة من المستوى الأعلى مع حدود قصوى وبطاقة سحب فعلية وقدرات تحويل دولية كاملة.",
+    "Eligibility (EN)": "Saudi nationals and residents 18+ with completed Premium KYC (Nafath)",
+    "Required Documents": [
+      "National ID",
+      "Selfie",
+      "Address Proof",
+      "Income Verification"
+    ],
+    "KYC Tier Required": "Premium",
+    "Onboarding Time": "10-15 minutes",
+    "Max Balance": 100000.0,
+    "Daily Transaction Limit": 50000.0,
+    "Monthly Transaction Limit": 200000.0,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "All Plus Wallet features",
+      "Higher transaction limits",
+      "Physical debit card delivered to home",
+      "International remittance (full limits)",
+      "Investment account eligibility",
+      "Premium support hotline"
+    ],
+    "Features (AR)": [
+      "جميع ميزات محفظة بلس",
+      "حدود معاملات أعلى",
+      "بطاقة سحب فعلية تصل إلى المنزل",
+      "تحويلات دولية بحدود كاملة",
+      "إمكانية فتح حساب استثمار",
+      "خط دعم مميز"
+    ],
+    "Upgrade Path": null
+  },
+  {
+    "Product ID": "PRD-WLT-BUSINESS",
+    "Product Name (EN)": "Business Wallet",
+    "Product Name (AR)": "محفظة الأعمال",
+    "Product Type": "Wallet",
+    "Product Tier": "Business",
+    "Description (EN)": "Wallet for SMEs with payroll, bulk payments, merchant acceptance (QR), and dedicated support.",
+    "Description (AR)": "محفظة للشركات الصغيرة والمتوسطة مع رواتب ومدفوعات جماعية وقبول تجار (QR) ودعم مخصص.",
+    "Eligibility (EN)": "Registered businesses with valid Commercial Registration",
+    "Required Documents": [
+      "Commercial Registration",
+      "Articles of Association",
+      "Owners' IDs"
+    ],
+    "KYC Tier Required": "Business",
+    "Onboarding Time": "1-3 business days",
+    "Max Balance": 500000.0,
+    "Daily Transaction Limit": 100000.0,
+    "Monthly Transaction Limit": 1000000.0,
+    "Annual Fee": 500.0,
+    "Features (EN)": [
+      "All Premium Wallet features",
+      "Payroll disbursement",
+      "Bulk payment uploads",
+      "QR code merchant acceptance",
+      "Dedicated relationship manager",
+      "Multi-user authorization"
+    ],
+    "Features (AR)": [
+      "جميع ميزات المحفظة المميزة",
+      "صرف الرواتب",
+      "تحميل المدفوعات الجماعية",
+      "قبول مدفوعات QR للتجار",
+      "مدير علاقة مخصص",
+      "تفويض متعدد المستخدمين"
+    ],
+    "Upgrade Path": null
+  },
+  {
+    "Product ID": "PRD-ACC-CURRENT",
+    "Product Name (EN)": "Current Account",
+    "Product Name (AR)": "الحساب الجاري",
+    "Product Type": "Account",
+    "Product Tier": "Standard",
+    "Description (EN)": "Everyday banking account with debit card, online banking, and full bill payment access.",
+    "Description (AR)": "حساب يومي مع بطاقة سحب وخدمات مصرفية إلكترونية ودفع فواتير كامل.",
+    "Eligibility (EN)": "Saudi nationals and residents 18+ with Standard KYC or higher",
+    "Required Documents": [
+      "National ID",
+      "Salary certificate or income proof"
+    ],
+    "KYC Tier Required": "Standard",
+    "Onboarding Time": "5-10 minutes",
+    "Max Balance": null,
+    "Daily Transaction Limit": 50000.0,
+    "Monthly Transaction Limit": null,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "Free IBAN",
+      "Free debit card",
+      "Free local transfers (SAR)",
+      "Direct salary deposit",
+      "Bill payment (all Sadad billers)",
+      "Mobile and online banking"
+    ],
+    "Features (AR)": [
+      "IBAN مجاني",
+      "بطاقة سحب مجانية",
+      "تحويلات محلية مجانية (ريال)",
+      "إيداع الراتب المباشر",
+      "دفع الفواتير (جميع مفوتري سداد)",
+      "خدمات مصرفية عبر الجوال والإنترنت"
+    ],
+    "Upgrade Path": null
+  },
+  {
+    "Product ID": "PRD-ACC-SAVINGS",
+    "Product Name (EN)": "Savings Account",
+    "Product Name (AR)": "حساب التوفير",
+    "Product Type": "Account",
+    "Product Tier": "Standard",
+    "Description (EN)": "Earn profit on your idle balance with a flexible savings account, no lock-in.",
+    "Description (AR)": "اربح عائدًا على رصيدك مع حساب توفير مرن بدون تجميد.",
+    "Eligibility (EN)": "Existing Noor Digital Bank current account holders",
+    "Required Documents": [
+      "Existing customer profile"
+    ],
+    "KYC Tier Required": "Standard",
+    "Onboarding Time": "Instant (existing customers)",
+    "Max Balance": null,
+    "Daily Transaction Limit": null,
+    "Monthly Transaction Limit": null,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "Profit rate 2.5% annually",
+      "No minimum balance",
+      "No lock-in period",
+      "Free transfers between own accounts",
+      "Goal-based savings buckets"
+    ],
+    "Features (AR)": [
+      "عائد سنوي ٢.٥٪",
+      "بدون حد أدنى للرصيد",
+      "بدون فترة تجميد",
+      "تحويلات مجانية بين الحسابات الشخصية",
+      "أهداف ادخار مجزأة"
+    ],
+    "Upgrade Path": null
+  },
+  {
+    "Product ID": "PRD-ACC-INVESTMENT",
+    "Product Name (EN)": "Investment Account",
+    "Product Name (AR)": "حساب الاستثمار",
+    "Product Type": "Account",
+    "Product Tier": "Premium",
+    "Description (EN)": "Sharia-compliant investment portfolio with sukuk, mutual funds, and Saudi equities.",
+    "Description (AR)": "محفظة استثمار متوافقة مع الشريعة تشمل صكوك وصناديق استثمار وأسهم سعودية.",
+    "Eligibility (EN)": "Premium KYC customers with minimum SAR 25,000 initial deposit",
+    "Required Documents": [
+      "Risk profile questionnaire",
+      "Investment agreement"
+    ],
+    "KYC Tier Required": "Premium",
+    "Onboarding Time": "10-20 minutes",
+    "Max Balance": null,
+    "Daily Transaction Limit": null,
+    "Monthly Transaction Limit": null,
+    "Annual Fee": 0.0,
+    "Features (EN)": [
+      "Sharia-compliant portfolio (sukuk, equities, mutual funds)",
+      "Risk-based portfolio construction",
+      "Real-time performance tracking",
+      "Quarterly rebalancing",
+      "Sharia advisory board oversight"
+    ],
+    "Features (AR)": [
+      "محفظة متوافقة مع الشريعة (صكوك، أسهم، صناديق)",
+      "بناء محفظة حسب الملف المخاطر",
+      "متابعة الأداء في الوقت الفعلي",
+      "إعادة موازنة ربع سنوية",
+      "إشراف من هيئة شرعية"
+    ],
+    "Upgrade Path": null
+  },
+  {
+    "Product ID": "PRD-CARD-CREDIT-PLATINUM",
+    "Product Name (EN)": "Platinum Credit Card",
+    "Product Name (AR)": "بطاقة بلاتينيوم الائتمانية",
+    "Product Type": "Card",
+    "Product Tier": "Platinum",
+    "Description (EN)": "Premium credit card with cashback rewards, travel benefits, and lounge access.",
+    "Description (AR)": "بطاقة ائتمانية مميزة مع استرداد نقدي ومزايا سفر ودخول الصالات.",
+    "Eligibility (EN)": "Premium KYC customers with min monthly income SAR 15,000",
+    "Required Documents": [
+      "National ID",
+      "Salary certificate",
+      "Bank statement (3 months)"
+    ],
+    "KYC Tier Required": "Premium",
+    "Onboarding Time": "3-5 business days",
+    "Max Balance": null,
+    "Daily Transaction Limit": 30000.0,
+    "Monthly Transaction Limit": null,
+    "Annual Fee": 600.0,
+    "Features (EN)": [
+      "1.5% cashback on all purchases",
+      "Free airport lounge access (8 visits/year)",
+      "Travel insurance",
+      "Concierge service",
+      "Sharia-compliant murabaha structure",
+      "Up to SAR 50,000 credit limit"
+    ],
+    "Features (AR)": [
+      "استرداد نقدي ١.٥٪ على جميع المشتريات",
+      "دخول مجاني لصالات المطارات (٨ زيارات/سنة)",
+      "تأمين سفر",
+      "خدمة كونسيرج",
+      "هيكل مرابحة متوافق مع الشريعة",
+      "حد ائتماني حتى ٥٠,٠٠٠ ريال"
+    ],
+    "Upgrade Path": null
+  }
+]
